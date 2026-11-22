@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EDUCONTROL | Sistema escolar</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div id="login" class="login-screen">
+    <form id="loginForm" class="login-card">
+      <div class="logo">EC</div>
+      <p class="eyebrow">PLATAFORMA EDUCATIVA</p>
+      <h1>Bienvenido a <span>EDUCONTROL</span></h1>
+      <p class="muted">Inicia sesión para ingresar al sistema.</p>
+      <label>Usuario<input id="username" required placeholder="Escribe tu usuario"></label>
+      <label>Contraseña<input id="password" type="password" required placeholder="Escribe tu contraseña"></label>
+      <button class="btn primary full">Iniciar sesión</button>
+      <p id="loginMessage" class="message"></p>
+      <div class="demo"><b>Cuenta de demostración</b><br>Administrador: admin / admin123</div>
+    </form>
+  </div>
+
+  <div id="app" class="app hidden">
+    <aside class="sidebar">
+      <div class="brand"><div class="logo mini">EC</div><div><b>EDUCONTROL</b><small>Sistema escolar</small></div></div>
+      <p class="menu-title">MENÚ PRINCIPAL</p>
+      <nav id="menu"></nav>
+      <div class="profile">
+        <div class="avatar" id="avatar">A</div>
+        <div class="profile-info"><b id="profileName">Usuario</b><small id="profileRole">Rol</small></div>
+        <button id="logout" class="logout" title="Cerrar sesión">↗</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div><p class="eyebrow">PANEL DE CONTROL</p><h1 id="pageTitle">Resumen</h1></div>
+        <span class="online"><i></i> Sesión activa</span>
+      </header>
+      <section id="content"></section>
+      <footer>© 2026 EDUCONTROL · Sistema de gestión escolar</footer>
+    </main>
+  </div>
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
